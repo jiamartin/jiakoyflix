@@ -1,4 +1,4 @@
-import { BASE_URL, API_KEY } from '../services/api';
+import { BASE_URL, API_KEY } from '../etc/secrets/api.js';
 
 export const getPopularMovies = async () => {
     const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`);
