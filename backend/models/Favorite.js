@@ -9,7 +9,7 @@ const favoriteSchema = new mongoose.Schema(
         },
         userID: {
             type: String,
-            required: true
+            required: false
         }
     },
     { timestamps: true } //createdAt, updatedAt

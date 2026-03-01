@@ -15,3 +15,13 @@ export const searchMovies = async (query) => {
     const data = await response.json()
     return data.results
 };
+
+export const getMovieDetails = async (movieIds) => {
+    const movieDetails = await Promise.all(
+        movieIds.map(async (id) => {
+            const response = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
+            return await response.json();
+        })
+    );
+    return movieDetails;
+}
